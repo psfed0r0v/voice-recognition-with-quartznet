@@ -1,0 +1,20 @@
+name: "quartznet"
+platform: "onnxruntime_onnx"
+default_model_filename: "model.onnx"
+
+max_batch_size: 1 #MAX_BATCH
+
+input [
+  {
+    name: "audio_signal"
+    data_type: TYPE_FP32
+    dims: [64, -1]
+  }
+]
+output [
+  {
+    name: "logprobs"
+    data_type: TYPE_FP32
+    dims: [-1, 29]
+  }
+]

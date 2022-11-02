@@ -1,0 +1,22 @@
+inference_params:
+  verbose: false
+  fixed_size: 0
+  batch_size: 1
+  triton_url: 127.0.0.1:8001
+  protocol: grpc
+  model_name: quartznet
+
+feature_preprocessing_params:
+  sample_rate: 16000
+  window_size: 0.02
+  window_stride: 0.01
+  window: hann
+  normalize: per_feature
+  n_fft: 512
+  preemph: 0.97
+  n_filt: 64
+  lowfreq: 0
+  dither: 0.00001
+  pad_align: 16
+  max_duration: 16.7
+  frame_splicing: 1
